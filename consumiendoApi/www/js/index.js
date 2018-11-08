@@ -31,14 +31,25 @@ var app={
     {
         //alert('dentro de la funcion'); aqui aun funciona
         //fetch('https://randomuser.me/api/') este api funciona
-        fetch('http://127.0.0.1:8000/conductores',{mode:'no-cors'})
+        //fetch('https://r0zfede6.apps.lair.io/conductores?format=json',{mode:'no-cors'})
+        //fetch('http://127.0.0.1:8000/conductores',{mode:'no-cors'})
+        fetch('https://r0zfede6.apps.lair.io/conductores.json',{
+        //fetch('http://127.0.0.1:8000/conductores.json',{
+            mode:'no-cors',
+            method: 'GET',
+            headers :{
+                'Accept': ' application/json',
+                'Content-Type': 'application/json'
+            }
+        })
         .then(res=>{
-            console.log(res)
+            res.json()
+            console.log(res.results)
             contenido.innerHTML=`${res.results}`
             alert('primera promesa')
         })
         .then(data =>{
-            console.log(data.results)
+            console.log(data)
             contenido.innerHTML+=`
             <p>nombre: ${data.results}</p>
             `
