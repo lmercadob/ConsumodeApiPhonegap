@@ -1,5 +1,5 @@
 # ConsumodeApiPhonegap
-app de prueba de consumo de una api con el reopositorio local
+app de prueba de consumo de una api con el repositorio local
 # A Blank PhoneGap App
 
 ## Usage
